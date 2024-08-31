@@ -2,7 +2,7 @@
 <ModSyncNinjaData>
   <ID>95c9c7c7-5e8c-4144-9605-56afa1b71050</ID>
   <ModName>[SYR] Prosthetic Table (Continued)</ModName>
-  <Version>1.5.0</Version>
+  <Version>1.5.1</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>emipa606</Owner>
@@ -12,7 +12,4 @@
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
-
-
-
 

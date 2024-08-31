@@ -1,4 +1,4 @@
-# [[SYR] Prosthetic Table (Continued)]()
+# [[SYR] Prosthetic Table (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3320042433)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -49,9 +49,6 @@ VFE Production copies recipes and in doing so re-adds prosthetics to the machini
 [quote]### **[Syrchalis' Mods](https://steamcommunity.com/workshop/filedetails/?id=1474000866)**
 [/quote]
 
-If you enjoy my mods consider dropping me a dime:
-[![Image](https://i.imgur.com/QMURwKz.png)[/url][url=https://www.patreon.com/syrchalis]![Image](https://i.imgur.com/NNM7mbP.png)](https://ko-fi.com/A0A0IJ2R)
-
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
 
@@ -65,3 +62,5 @@ If you enjoy my mods consider dropping me a dime:
 -  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
 
+
+[![Image](https://img.shields.io/github/v/release/emipa606/SYRProstheticTable?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3320042433)

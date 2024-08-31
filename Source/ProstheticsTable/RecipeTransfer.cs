@@ -6,8 +6,15 @@ namespace ProstheticsTable;
 [StaticConstructorOnStartup]
 public static class RecipeTransfer
 {
+    public static readonly bool VEPLoaded = DefDatabase<ThingDef>.GetNamedSilentFail("VFE_TableMachiningLarge") != null;
+
     static RecipeTransfer()
     {
+        if (VEPLoaded)
+        {
+            return;
+        }
+
         var enumerable = DefDatabase<RecipeDef>.AllDefs.Where(x =>
             !x.AllRecipeUsers.EnumerableNullOrEmpty() &&
             x.AllRecipeUsers.Any(ru =>
