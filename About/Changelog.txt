@@ -1,0 +1,7 @@
+# Changelog for SYRProstheticTable
+
+1.5.1 - Should work better when [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1880253632]Vanilla Furniture Expanded - Production[/url] is loaded.
+
+
+1.5.0 - First publish
+
