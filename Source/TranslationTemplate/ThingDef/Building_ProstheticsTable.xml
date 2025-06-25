@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: prosthetics table -->
+  <TableSyrProsthetics.label>prosthetics table</TableSyrProsthetics.label>
+  <!-- EN: A work station for crafting prosthetics of all kinds. Make sure you actually know how to craft any prosthetics before using this workbench. -->
+  <TableSyrProsthetics.description>A work station for crafting prosthetics of all kinds. Make sure you actually know how to craft any prosthetics before using this workbench.</TableSyrProsthetics.description>
+</LanguageData>

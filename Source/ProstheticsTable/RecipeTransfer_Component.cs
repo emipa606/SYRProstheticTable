@@ -8,7 +8,7 @@ namespace ProstheticsTable;
 [StaticConstructorOnStartup]
 public class RecipeTransfer_Component : GameComponent
 {
-    public static readonly FieldInfo ThingDef_allRecipesCached =
+    private static readonly FieldInfo thingDefAllRecipesCached =
         typeof(ThingDef).GetField("allRecipesCached", BindingFlags.Instance | BindingFlags.NonPublic);
 
     public RecipeTransfer_Component(Game game)
@@ -18,7 +18,7 @@ public class RecipeTransfer_Component : GameComponent
     public override void FinalizeInit()
     {
         base.FinalizeInit();
-        if (!RecipeTransfer.VEPLoaded)
+        if (!RecipeTransfer.VepLoaded)
         {
             return;
         }
@@ -30,7 +30,7 @@ public class RecipeTransfer_Component : GameComponent
                 ru.defName == "VFE_TableMachiningLarge") &&
             x.products.Any(p =>
                 !p.thingDef.tradeTags.NullOrEmpty() &&
-                (p.thingDef.isTechHediff || p.thingDef.tradeTags.Any(tt => tt == "TechHediff"))));
+                (p.thingDef.isTechHediff || p.thingDef.tradeTags.Any(tt => tt == "TechHediff")))).ToArray();
         if (recipeDefs.EnumerableNullOrEmpty())
         {
             return;
@@ -47,10 +47,10 @@ public class RecipeTransfer_Component : GameComponent
                 foreach (var recipeUser in recipeDef.recipeUsers)
                 {
                     recipeUser.recipes = recipeUser.recipes.Where(def => def != recipeDef).ToList();
-                    var cachedRecipes = (List<RecipeDef>)ThingDef_allRecipesCached.GetValue(recipeUser);
+                    var cachedRecipes = (List<RecipeDef>)thingDefAllRecipesCached.GetValue(recipeUser);
                     if (cachedRecipes.Any())
                     {
-                        ThingDef_allRecipesCached.SetValue(recipeUser,
+                        thingDefAllRecipesCached.SetValue(recipeUser,
                             cachedRecipes.Where(def => def != recipeDef).ToList());
                     }
                 }

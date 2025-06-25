@@ -6,11 +6,11 @@ namespace ProstheticsTable;
 [StaticConstructorOnStartup]
 public static class RecipeTransfer
 {
-    public static readonly bool VEPLoaded = DefDatabase<ThingDef>.GetNamedSilentFail("VFE_TableMachiningLarge") != null;
+    public static readonly bool VepLoaded = DefDatabase<ThingDef>.GetNamedSilentFail("VFE_TableMachiningLarge") != null;
 
     static RecipeTransfer()
     {
-        if (VEPLoaded)
+        if (VepLoaded)
         {
             return;
         }
@@ -21,7 +21,7 @@ public static class RecipeTransfer
                 ru == ProstheticsTableDefOf.TableMachining || ru == ProstheticsTableDefOf.FabricationBench) &&
             x.products.Any(p =>
                 !p.thingDef.tradeTags.NullOrEmpty() &&
-                (p.thingDef.isTechHediff || p.thingDef.tradeTags.Any(tt => tt == "TechHediff"))));
+                (p.thingDef.isTechHediff || p.thingDef.tradeTags.Any(tt => tt == "TechHediff")))).ToArray();
         if (enumerable.EnumerableNullOrEmpty())
         {
             return;
