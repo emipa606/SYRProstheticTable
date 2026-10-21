@@ -48,7 +48,7 @@ public class RecipeTransfer_Component : GameComponent
                 {
                     recipeUser.recipes = recipeUser.recipes.Where(def => def != recipeDef).ToList();
                     var cachedRecipes = (List<RecipeDef>)thingDefAllRecipesCached.GetValue(recipeUser);
-                    if (cachedRecipes.Any())
+                    if (cachedRecipes != null && cachedRecipes.Any())
                     {
                         thingDefAllRecipesCached.SetValue(recipeUser,
                             cachedRecipes.Where(def => def != recipeDef).ToList());
